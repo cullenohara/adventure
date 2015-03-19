@@ -1,16 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-using System;
+using System.Collections.Generic;
 
-[Serializable]
-public class NPC {
+public class NPC : MonoBehaviour {
 
-	public string npcName;
-	public bool hasQuest;
+	public int npcID;
+	public string firstName;
+	public string lastName;
+	public int questID;
+	public int questAreaID;
 
-	public NPC (string _npcName, bool _hasQuest)
+	public Quests quest;
+
+	void Start ()
 	{
-		npcName = _npcName;
-		hasQuest = _hasQuest;
+		GenerateQuest();
 	}
+
+	void GenerateQuest()
+	{
+		//quest = new Quests(npcID
+	}
+
 }

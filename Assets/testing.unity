@@ -87,6 +87,33 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &58445891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 58445892}
+  m_Layer: 0
+  m_Name: Quest_Area_List
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &58445892
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58445891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.27291131, y: 2.80095863, z: .0248321649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1641926354}
+  m_RootOrder: 2
 --- !u!1 &469361448
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,13 +122,26 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469361450}
+  - 114: {fileID: 469361449}
   m_Layer: 0
   m_Name: NPC_List
-  m_TagString: Untagged
+  m_TagString: npc_list
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &469361449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 469361448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ad0574814bee54c88dfb5369cf4a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcList: []
 --- !u!4 &469361450
 Transform:
   m_ObjectHideFlags: 0
@@ -109,11 +149,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 469361448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.90896726, y: -2.52611113, z: .0248321649}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1641926354}
-  m_RootOrder: 1
+  m_Father: {fileID: 1316511212}
+  m_RootOrder: 2
 --- !u!1 &554681109
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +214,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,48 +238,138 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1 &1229808359
+--- !u!1 &828853990
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1229808361}
-  - 114: {fileID: 1229808360}
+  - 4: {fileID: 828853992}
+  - 114: {fileID: 828853991}
   m_Layer: 0
-  m_Name: QuestGenerator
+  m_Name: QuestAreaGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1229808360
+--- !u!114 &828853991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1229808359}
+  m_GameObject: {fileID: 828853990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d101cf9f3d2c642a26120ad536b3d6, type: 3}
+  m_Script: {fileID: 11500000, guid: dae4ac8ccd929e144b073b31ad5405f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questGenerator: {fileID: 0}
-  questType: {fileID: 0}
-  questList: []
---- !u!4 &1229808361
+  questAreaPrefab: {fileID: 447682, guid: 6251572cafd416a43b9e90dce16f2d9d, type: 2}
+  tileArray: {fileID: 0}
+--- !u!4 &828853992
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1229808359}
+  m_GameObject: {fileID: 828853990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.90896726, y: -2.52611113, z: .0248321649}
+  m_LocalPosition: {x: -3.27291131, y: 2.80095863, z: .0248321649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641926354}
-  m_RootOrder: 2
+  m_RootOrder: 1
+--- !u!1 &1211534729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1211534730}
+  - 114: {fileID: 1211534731}
+  m_Layer: 0
+  m_Name: Name_Database
+  m_TagString: npc_names
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211534730
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211534729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1316511212}
+  m_RootOrder: 0
+--- !u!114 &1211534731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211534729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c71d547ce8d447ea888143b6ad5db77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstNames:
+  - One-Eyed
+  - Speedy
+  - Jingleheimer
+  - Schmit
+  - Rico
+  - Taco
+  - Beefcake
+  - Captain
+  - Scooter
+  - Spanky
+  lastNames:
+  - Johnson
+  - Sparkles
+  - Pancakes
+  - McGee
+  - Suave
+  - Bronson
+  - Gunz
+  - Fatz
+  - Porkinz
+  - McGrubber
+--- !u!1 &1316511211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1316511212}
+  m_Layer: 0
+  m_Name: NPC_Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316511212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316511211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1211534730}
+  - {fileID: 2080466326}
+  - {fileID: 469361450}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1641926353
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,8 +396,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1859572053}
-  - {fileID: 469361450}
-  - {fileID: 1229808361}
+  - {fileID: 828853992}
+  - {fileID: 58445892}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &1859572051
@@ -278,7 +408,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1859572053}
-  - 114: {fileID: 1859572052}
   m_Layer: 0
   m_Name: Quest_List
   m_TagString: quest_generator
@@ -286,21 +415,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1859572052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859572051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73eb88b13bae432fa42be0fc6ea9195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questTypes:
-  - kill
-  - find
-  - escort
 --- !u!4 &1859572053
 Transform:
   m_ObjectHideFlags: 0
@@ -323,7 +437,7 @@ GameObject:
   - 4: {fileID: 2080466326}
   - 114: {fileID: 2080466325}
   m_Layer: 0
-  m_Name: NPCGenerator
+  m_Name: NPC_Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,12 +454,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e467289f00ea43139297acbd98ea599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcPrefab: {fileID: 483544, guid: 45178b486542d9746b72ecfa06c9bb7f, type: 2}
 --- !u!4 &2080466326
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080466324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1316511212}
+  m_RootOrder: 1
+--- !u!1 &2086914394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2086914396}
+  - 114: {fileID: 2086914395}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: map_generator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086914395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086914394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d373d93362c40929128f3893ed42ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileList: []
+  mapSize: 10
+  tileOffset: 1
+  y: 0
+  tile: {fileID: 448644, guid: d1caf4b9a993dfc4b8fd702ceea78785, type: 2}
+--- !u!4 &2086914396
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086914394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

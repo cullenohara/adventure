@@ -6,6 +6,8 @@ TagManager:
   tags:
   - npc_names
   - quest_generator
+  - map_generator
+  - npc_list
   layers:
   - Default
   - TransparentFX
