@@ -26,7 +26,7 @@ public class NPCGenerator : MonoBehaviour {
 		npcList = GameObject.FindGameObjectWithTag("npc_list").GetComponent<NPCList>();
 		tileArray = GameObject.FindGameObjectWithTag("map_generator").GetComponent<MapGenerator>();
 		namesList = GameObject.FindGameObjectWithTag("npc_names").GetComponent<NPCNames>();
-		npcCount = Random.Range(2,5);
+		npcCount = GameObject.FindGameObjectWithTag("quest_area_gen").GetComponent<QuestAreaGenerator>().questAreaCount;
 		FindTile();
 	}
 

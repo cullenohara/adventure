@@ -8,6 +8,9 @@ TagManager:
   - quest_generator
   - map_generator
   - npc_list
+  - quest_area_list
+  - quest_area_gen
+  - name_text
   layers:
   - Default
   - TransparentFX
