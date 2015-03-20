@@ -7,13 +7,9 @@ public class QuestArea : MonoBehaviour {
 	public bool inUse = false;
 	public int npcConnectionID;
 
-	void Update () 
-	{
-		
-	}
-
 	void OnMouseEnter ()
 	{
-		print ("poop");
+		print ("Connected NPC ID: " + npcConnectionID);
+		//print ("Quest ID: " + questID);
 	}
 }

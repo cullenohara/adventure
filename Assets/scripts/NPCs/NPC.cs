@@ -11,14 +11,12 @@ public class NPC : MonoBehaviour {
 	public int questID;
 	public int questAreaID;
 
-	public Quests quest;
-
-	public Quest_Area_List qaList;
-
 	private int randomQuestArea;
-
 	private Color questAreaColor;
 	private Text nameText;
+
+	//public Quests quest;
+	public Quest_Area_List qaList;
 
 	void Start ()
 	{
